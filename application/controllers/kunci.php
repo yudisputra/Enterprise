@@ -5,7 +5,7 @@ class Kunci extends CI_Controller {
 	var $API ="";
 	function __construct() {
 	parent::__construct();
-	$this->API="http://192.168.1.101/enterprise/index.php";
+	$this->API="http://localhost:8012/Enterprise/index.php";
 	$this->load->library('session');
 	}
 

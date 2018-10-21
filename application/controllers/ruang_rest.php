@@ -8,14 +8,14 @@
 
         //show data mahasiswa
         function index_get(){
-            $nim = $this->get('nim');
-            if($nim == ''){
-                $mahasiswa = $this->db->get('mahasiswa')->result();
+            $noruang = $this->get('noruang');
+            if($noruang == ''){
+                $ruang = $this->db->get('ruang')->result();
             } else{
-                $this->db->where('nim', $nim);
-                $mahasiswa = $this->db->get('mahasiswa')->result();
+                $this->db->where('noruang', $noruang);
+                $ruang = $this->db->get('ruang')->result();
             }
-            $this->response($mahasiswa, 200);
+            $this->response($ruang, 200);
         }
 
         //insert new data to mahasiswa
