@@ -17,7 +17,9 @@ class Kunci extends CI_Controller {
 	public function getMahasiswa($nim)
 	{
 		$this->load->model('kunci_model');
-		$data["ruang"] = $this->kunci_model->getRuangan();
+		// $insert = $this->curl->simple_post($this->API.'/ruang_rest', $data, array(CURLOPT_BUFFERSIZE => 10));
+		$data["ruang"] = json_decode($this->curl->simple_get($this->API.'/ruang_rest/'));
+		$this->kunci_model->insertruang_rest($data);
 		$data["mahasiswa"] = json_decode($this->curl->simple_get($this->API.'/mahasiswa_rest/?nim='.$nim));
 		$this->load->view('mahasiswa/listtest',$data);
 	}

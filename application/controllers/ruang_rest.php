@@ -20,11 +20,10 @@
 
         //insert new data to mahasiswa
         function index_post(){
-            $data = array(
-                        'nim'           => $this->post('noruang'),
-                        'nama'          => $this->post('namaruang'),
-                        'tempatlahir'   => $this->post('lokasiruang'),
-            );
+
+            $this->load->model('kunci_model');
+            $data = $this->kunci_model->getRuangan();
+            var_dump($data);
             $insert = $this->db->insert('ruang', $data);
             if($insert){
                 $this->response($data, 200);

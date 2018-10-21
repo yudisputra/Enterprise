@@ -18,6 +18,11 @@ class kunci_model extends CI_Model {
          $this->db->insert('pinjam', $object);
     }
 
+    public function insertruang_rest($data)
+    {
+         $this->db->insert('pinjam', $data);
+    }
+
     public function tabelpinjam()
     {
        $query = $this->db->get('pinjam');
