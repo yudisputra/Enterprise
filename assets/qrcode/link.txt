@@ -1,0 +1,4 @@
+https://github.com/LazarSoft/jsqrcode
+http://lazarsoft.info/
+https://github.com/cirocosta/qcode-decoder
+http://cirocosta.github.io/qcode-decoder/
